@@ -10,7 +10,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    data = ModalRoute.of(context).settings.arguments;
+    data = data.isNotEmpty ? data : ModalRoute.of(context).settings.arguments;
     print(data);
 
     //set Background
@@ -23,26 +23,37 @@ class _HomeState extends State<Home> {
         child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/$bgImage'),
-                fit: BoxFit.cover,
-              )
-          ),
+            image: AssetImage('assets/$bgImage'),
+            fit: BoxFit.cover,
+          )),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 120, 0, 0),
             child: Column(
               children: <Widget>[
                 FlatButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/location');
+                  onPressed: () async {
+                    dynamic result =
+                        await Navigator.pushNamed(context, '/location');
+                    if (result != null) {
+                      setState(() {
+                        data = {
+                          'time': result['time'],
+                          'location': result['location'],
+                          'isDaytime': result['isDaytime'],
+                          'flag': result['flag']
+                        };
+                      });
+                    }
                   },
                   icon: Icon(
-                      Icons.edit_location,
-                      color: Colors.grey[300],
-                  ),
-                  label: Text('Edit Location',
-                  style: TextStyle(
+                    Icons.edit_location,
                     color: Colors.grey[300],
                   ),
+                  label: Text(
+                    'Edit Location',
+                    style: TextStyle(
+                      color: Colors.grey[300],
+                    ),
                   ),
                 ),
                 SizedBox(
