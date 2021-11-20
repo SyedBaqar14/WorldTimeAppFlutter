@@ -12,8 +12,4 @@ Lab: Write your first Flutter app
 Cookbook: Useful Flutter samples
 For help getting started with Flutter, view our online documentation, which offers tutorials, samples, guidance on mobile development, and a full API reference.
 
-![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073503.png?raw=true)
-
-![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073511.png?raw=true)
-
-![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073519.png?raw=true)
+![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073503.png?raw=true) ![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073511.png?raw=true) ![this is image text](https://github.com/SyedBaqar14/DATAIMAGES/blob/main/Screenshot_20210515-073519.png?raw=true)
